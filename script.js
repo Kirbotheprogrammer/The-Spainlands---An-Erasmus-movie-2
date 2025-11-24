@@ -1,46 +1,43 @@
-let video = document.getElementById("flag");
-let trailer = document.getElementById("container")
-
-
-video.onclick = function(){
-    if(document.getElementById("flag").getAttribute("href") == "#play"){
-
-        trailer.innerHTML = '<a onclick="event.preventDefault()" href="#" id="play" > <iframe width="1840" height="1035" src="https://www.youtube.com/embed/MIQ-iFrRIpg?autoplay=1&vq=hd1080" title="An Erasmus movie 2   The Spainlands" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></a>';
-        document.getElementById("flag").setAttribute("href", "#");
-    } else {
-        document.getElementById("flag").setAttribute("href", "#play");
-        trailer.innerHTML = ' ';
-    }
+function Go1() {
+    window.location.href = "End_poem.html";
 }
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-            var scrollpos = localStorage.getItem('scrollpos');
-            if (scrollpos) window.scrollTo(0, scrollpos);
-        });
+function Go2() {
+    window.location.href = "New_Edition.html";
+}
 
-        window.onbeforeunload = function(e) {
-            localStorage.setItem('scrollpos', window.scrollY);
-        };
-        const targetDate = new Date("2025-09-24T23:59:59").getTime();
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
+function Go3() {
+    window.location.href = "Official_Release.html";
+}
 
-            if (timeLeft > 0) {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+function Go4() {
+    window.location.href = "Reset.html";
+}
 
-                document.getElementById("countdown").innerHTML = 
-                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            } else {
-                document.getElementById("countdown").innerHTML = "The SpainLands is out!";
-                clearInterval(interval);
-            }
-        }
+function Go5() {
+    window.location.href = "index.html";
+}
 
-    
+function Go6() {
+    window.location.href = "An_Erasmus_Movie_1.html";
+}
 
-        const interval = setInterval(updateCountdown, 1000);
-        updateCountdown();
+function Go7(){
+    window.location.href="Classic.html"
+}
+
+function Go8(){
+    window.location.href="New_Edition_EC.html"
+}
+
+function Go9(){
+    window.location.href = "Official_Release_EC.html"
+}
+
+function Go10(){
+    window.location.href = "Consequences.html"
+}
+
+function Go11(){
+    window.location.href = "End_poem_2.html"
+}
